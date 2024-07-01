@@ -6,7 +6,7 @@ var compression = require('compression');
 
 var helmet = require('helmet');
 const corsOptions ={
-    origin:['https://localhost:3000', 'https://192.168.1.111:3000', 'http://localhost:3000'], 
+    origin:["https://encheu.com.br",'https://localhost:3000', 'https://192.168.1.111:3000', 'http://localhost:3000'], 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
