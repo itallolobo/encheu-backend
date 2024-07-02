@@ -5,12 +5,7 @@ const mongoose   = require('mongoose')
 var compression = require('compression');
 
 var helmet = require('helmet');
-const corsOptions ={
-    origin:["https://encheu.com.br",'https://localhost:3000', 'https://192.168.1.111:3000', 'http://localhost:3000'], 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 app.use(helmet());
