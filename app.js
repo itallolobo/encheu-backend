@@ -228,10 +228,10 @@ async function calculateWaterLevelPercentage(waterLevel) {
     
     // Calculate percentage considering sensor offset
     // Formula: (measured_height / (total_height - sensor_offset)) * 100
-    const percentage = ((measuredHeight - sensor_offset)  / totalHeight ) * 100;
+    const percentage = 100 - (((measuredHeight - sensor_offset)  / totalHeight ) * 100);
     
     // Clamp value between 0 and 100
-    return Math.min(Math.max(percentage, 0), 100);
+    return percentage;
   } catch (error) {
     console.error('Error calculating water level percentage:', error);
     return waterLevel; // Return raw value on error
